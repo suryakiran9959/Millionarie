@@ -1,13 +1,18 @@
 import { useEffect, useMemo, useState } from "react";
+import { useNavigate } from "react-router-dom"; // Import useNavigate for navigation
 import "../App.css";
-import Trivia from "./main";
-import Timer from "./Timer";
+import "./one.css"
+import Trivia from "./main"; // Trivia component for questions
+import Timer from "./timer"; // Timer component for game timer
 
 function One() {
   const [questionNumber, setQuestionNumber] = useState(1);
-  const [stop, setStop] = useState(false);
+  const [stop, setStop] = useState(false); // Track if the game is stopped
   const [earned, setEarned] = useState("$ 0");
+  const navigate = useNavigate(); // For navigating back to the main page
 
+
+  // Full set of 15 trivia questions
   const data = [
     {
       id: 1,
@@ -183,16 +188,29 @@ function One() {
     []
   );
 
+ 
+  // Update earned amount based on the question number
   useEffect(() => {
     questionNumber > 1 &&
       setEarned(moneyPyramid.find((m) => m.id === questionNumber - 1).amount);
   }, [moneyPyramid, questionNumber]);
 
+  // Handle "Back to Main Page" button click
+  const handleBackToMain = () => {
+    navigate("/"); // Navigate back to the main page
+  };
+
   return (
     <div className="app">
       <div className="main">
         {stop ? (
-          <h1 className="endText">You earned: {earned}</h1>
+          <div>
+            <h1 className="endText">You earned: {earned}</h1>
+            {/* Back to Main Page button after game ends */}
+            <button onClick={handleBackToMain} className="back-button">
+              Back to Main Page
+            </button>
+          </div>
         ) : (
           <>
             <div className="top">
@@ -203,7 +221,7 @@ function One() {
             <div className="bottom">
               <Trivia
                 data={data}
-                setStop={setStop}
+                setStop={setStop} // Stop the game when the player answers incorrectly
                 setQuestionNumber={setQuestionNumber}
                 questionNumber={questionNumber}
               />

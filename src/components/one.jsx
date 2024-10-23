@@ -2,8 +2,8 @@ import { useEffect, useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom"; // Import useNavigate for navigation
 import "../App.css";
 import "./one.css"
-import MainGame from "../components/mainGame"; // Trivia component for questions
-import Timer from "../components/timer"; // Timer component for game timer
+import MainGame from "./mainGame"; // Trivia component for questions
+import Timing from "./timing";
 
 function One() {
   const [questionNumber, setQuestionNumber] = useState(1);
@@ -160,7 +160,7 @@ function One() {
           <>
             <div className="top">
               <div className="timer">
-                <Timer setStop={setStop} questionNumber={questionNumber} />
+                <Timing setStop={setStop} questionNumber={questionNumber} />
               </div>
             </div>
             <div className="bottom">

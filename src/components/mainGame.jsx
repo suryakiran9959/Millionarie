@@ -5,7 +5,7 @@ import play from "../assets/play.mp3";
 import correct from "../assets/correct.mp3";
 import wrong from "../assets/wrong.mp3";
 
-export default function Trivia({
+export default function MainGame({
   data,
   setStop,
   questionNumber,

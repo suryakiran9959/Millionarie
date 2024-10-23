@@ -1,70 +1,133 @@
+/* Main container */
 .main-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background-color: #f7f9fc;
-    font-family: 'Arial', sans-serif;
-  }
-  
-  .welcome-section {
-    text-align: center;
-  }
-  
-  .title {
-    font-size: 2.5rem;
-    color: #333;
-    margin-bottom: 20px;
-  }
-  
-  .button-container {
-    margin-bottom: 20px;
-  }
-  
-  .start-button {
-    padding: 10px 20px;
-    font-size: 1.2rem;
-    background-color: #3498db;
-    border: none;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .start-button:hover {
-    background-color: #2980b9;
-  }
-  
-  .auth-section {
-    width: 100%;
-    max-width: 400px;
-    margin: 0 auto;
-  }
-  
-  .logout-button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 1.2rem;
-    background-color: #e74c3c;
-    border: none;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .logout-button:hover {
-    background-color: #c0392b;
-  }
-  
-  .game-section {
-    text-align: center;
-    padding: 50px;
-  }
-  
-  .game-section h1 {
-    color: #333;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f7f9fc;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Welcome section */
+.welcome-section {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Title styling */
+.title {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+/* Button container for Play Preview */
+.button-container {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Start button (Play Preview) styling */
+.start-button {
+  padding: 15px 25px;
+  font-size: 1.5rem;
+  background-color: #3498db;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.start-button:hover {
+  background-color: #2980b9;
+}
+
+/* Authentication section */
+.auth-section {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* Auth form styling */
+.auth-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.auth-form {
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+/* Authentication buttons container */
+.auth-button-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+/* Individual auth buttons (Login and Signup) */
+.auth-button {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  background-color: #2ecc71;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  flex: 1; /* This ensures equal width for both buttons */
+}
+
+.auth-button:hover {
+  background-color: #27ae60;
+}
+
+/* Logout button styling */
+.logout-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  background-color: #e74c3c;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+  background-color: #c0392b;
+}
+
+/* Game section styling */
+.game-section {
+  text-align: center;
+  padding: 50px;
+}
+
+.game-section h1 {
+  color: #333;
+}
+
   

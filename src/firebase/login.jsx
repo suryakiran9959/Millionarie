@@ -2,9 +2,9 @@
 import { auth } from "./firebase";
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth"; // Import the function
 import { useState } from "react";
-import "./login.css";
+import "./main.css";
 
-function Exp1() {
+function Login() {
   const [data, setData] = useState({ email: "", password: "" });
   const { email, password } = data;
 
@@ -78,6 +78,6 @@ function Exp1() {
   );
 }
 
-export default Exp1;
+export default Login;
 
 

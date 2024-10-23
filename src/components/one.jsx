@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom"; // Import useNavigate for navigation
 import "../App.css";
 import "./one.css"
-import Trivia from "./main"; // Trivia component for questions
+import MainGame from "./mainGame"; // Trivia component for questions
 import Timer from "./timer"; // Timer component for game timer
 
 function One() {
@@ -86,46 +86,6 @@ function One() {
     },
     {
       id: 8,
-      question: "Which of the following is true about React hooks?",
-      answers: [
-        { text: "Hooks are JavaScript classes", correct: false },
-        { text: "Hooks are used to manage side effects and state in functional components", correct: true },
-        { text: "Hooks are used only in class components", correct: false },
-        { text: "Hooks are event listeners", correct: false },
-      ],
-    },
-    {
-      id: 9,
-      question: "What is JSX in React?",
-      answers: [
-        { text: "A JavaScript extension for defining objects", correct: false },
-        { text: "A JavaScript syntax extension to write HTML in React", correct: true },
-        { text: "A database query language", correct: false },
-        { text: "A style sheet language", correct: false },
-      ],
-    },
-    {
-      id: 10,
-      question: "What is the use of the useState hook in React?",
-      answers: [
-        { text: "To manage the state of functional components", correct: true },
-        { text: "To handle events", correct: false },
-        { text: "To manage side effects", correct: false },
-        { text: "To connect to the DOM", correct: false },
-      ],
-    },
-    {
-      id: 11,
-      question: "What does the virtual DOM in React improve?",
-      answers: [
-        { text: "Server performance", correct: false },
-        { text: "Rendering speed by reducing the actual DOM updates", correct: true },
-        { text: "JavaScript execution speed", correct: false },
-        { text: "CSS styling", correct: false },
-      ],
-    },
-    {
-      id: 12,
       question: "What is the significance of 'key' in a list of React elements?",
       answers: [
         { text: "It helps React keep track of elements between renders", correct: true },
@@ -135,7 +95,7 @@ function One() {
       ],
     },
     {
-      id: 13,
+      id: 9,
       question: "Which React hook is used to perform side effects in function components?",
       answers: [
         { text: "useState", correct: false },
@@ -145,17 +105,7 @@ function One() {
       ],
     },
     {
-      id: 14,
-      question: "What is the purpose of useReducer in React?",
-      answers: [
-        { text: "To fetch data from an API", correct: false },
-        { text: "To manage state with reducers", correct: true },
-        { text: "To handle routing", correct: false },
-        { text: "To style components", correct: false },
-      ],
-    },
-    {
-      id: 15,
+      id: 10,
       question: "What is Context API used for in React?",
       answers: [
         { text: "To handle API calls", correct: false },
@@ -178,12 +128,7 @@ function One() {
         { id: 7, amount: "$ 4000" },
         { id: 8, amount: "$ 8000" },
         { id: 9, amount: "$ 16000" },
-        { id: 10, amount: "$ 32000" },
-        { id: 11, amount: "$ 64000" },
-        { id: 12, amount: "$ 125000" },
-        { id: 13, amount: "$ 250000" },
-        { id: 14, amount: "$ 500000" },
-        { id: 15, amount: "$ 1000000" },
+        { id: 10, amount: "$ 32000" }
       ].reverse(),
     []
   );
@@ -219,7 +164,7 @@ function One() {
               </div>
             </div>
             <div className="bottom">
-              <Trivia
+              <MainGame
                 data={data}
                 setStop={setStop} // Stop the game when the player answers incorrectly
                 setQuestionNumber={setQuestionNumber}

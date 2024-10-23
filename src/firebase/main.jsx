@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { auth, signOut } from "./firebase"; // Firebase authentication and signOut
 import { useNavigate } from "react-router-dom"; // Navigation
-import Exp1 from "./login"; // Login/Sign-up component
+import Login from "./login"; // Login/Sign-up component
 import One from "../components/one"; // Game component
 import './main.css'; // Custom styles for UI
 
@@ -62,11 +62,11 @@ function Main() {
           <h1 className="title">Welcome to the Millionaire Quiz</h1>
           <div className="button-container">
             <button onClick={handleTestPlay} className="start-button">
-              Test Play (No Login Required)
+            Play Preview
             </button>
           </div>
           <div className="auth-section">
-            <Exp1 /> {/* Render login/signup form */}
+            <Login /> {/* Render login/signup form */}
           </div>
         </div>
       )}

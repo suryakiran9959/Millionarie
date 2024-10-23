@@ -166,6 +166,9 @@ function One() {
             <div className="bottom">
               <MainGame
                 data={data}
+
+
+                
                 setStop={setStop} // Stop the game when the player answers incorrectly
                 setQuestionNumber={setQuestionNumber}
                 questionNumber={questionNumber}

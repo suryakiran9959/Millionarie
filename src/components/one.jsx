@@ -2,8 +2,8 @@ import { useEffect, useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom"; // Import useNavigate for navigation
 import "../App.css";
 import "./one.css"
-import MainGame from "./mainGame"; // Trivia component for questions
-import Timer from "./timer"; // Timer component for game timer
+import MainGame from "../components/mainGame"; // Trivia component for questions
+import Timer from "../components/timer"; // Timer component for game timer
 
 function One() {
   const [questionNumber, setQuestionNumber] = useState(1);
